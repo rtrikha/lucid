@@ -94,3 +94,48 @@ body {
     }
 
 }
+
+#thunder-player {
+	width: 120px;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+	top: 80px;
+}
+
+#thunder-volume {
+	position: relative;
+	left: 24px;
+	margin: 0 auto;
+	height: 5px;
+	width: 100%;
+	background: #1D1D1F;
+	border-radius: 15px;
+
+	.ui-slider-range-min {
+		height: 5px;
+		width: 100%;
+		position: absolute;
+		background: $primary-color;
+		border: none;
+		border-radius: 10px;
+		outline: none;
+	}
+
+	.ui-slider-handle {
+		width: 16px;
+		height: 16px;
+		border-radius: 20px;
+		background: #A1A1A6;
+		position: absolute;
+        margin-left: -8px;
+		margin-top: -6px;
+		cursor: pointer;
+        outline: none;
+
+        &:hover {
+            background: white;
+          }
+    }
+
+}
