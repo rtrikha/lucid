@@ -1,0 +1,178 @@
+$primary-color: #6e6e73;
+
+
+.brown-noise {
+	display: flex;
+    flex-direction: column;
+    width: 8vw;
+    padding-top: 10vh;
+    padding-left: 10vw;
+}
+
+#wave-player {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 2vh auto;
+
+	#wave-volume {
+		position: relative;
+		margin: 0 auto;
+		height: 5px;
+		width: 100%;
+		background: #1d1d1f;
+		border-radius: 15px;
+
+		.ui-slider-range-min {
+			height: 5px;
+			width: 100%;
+			position: absolute;
+			background: $primary-color;
+			border: none;
+			border-radius: 10px;
+			outline: none;
+		}
+
+		.ui-slider-handle {
+			width: 14px;
+			height: 14px;
+			border-radius: 20px;
+			background: #a1a1a6;
+			position: absolute;
+			margin-left: -8px;
+			margin-top: -5px;
+			cursor: pointer;
+			outline: none;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+}
+
+#rain-player {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 2vh auto;
+
+	#rain-volume {
+		position: relative;
+		margin: 0 auto;
+		height: 5px;
+		width: 100%;
+		background: #1d1d1f;
+		border-radius: 15px;
+
+		.ui-slider-range-min {
+			height: 5px;
+			width: 100%;
+			position: absolute;
+			background: $primary-color;
+			border: none;
+			border-radius: 10px;
+			outline: none;
+		}
+
+		.ui-slider-handle {
+			width: 14px;
+			height: 14px;
+			border-radius: 20px;
+			background: #a1a1a6;
+			position: absolute;
+			margin-left: -8px;
+			margin-top: -5px;
+			cursor: pointer;
+			outline: none;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+}
+
+#thunder-player {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 2vh auto;
+
+	#thunder-volume {
+		position: relative;
+		margin: 0 auto;
+		height: 5px;
+		width: 100%;
+		background: #1d1d1f;
+		border-radius: 15px;
+
+		.ui-slider-range-min {
+			height: 5px;
+			width: 100%;
+			position: absolute;
+			background: $primary-color;
+			border: none;
+			border-radius: 10px;
+			outline: none;
+		}
+
+		.ui-slider-handle {
+			width: 14px;
+			height: 14px;
+			border-radius: 20px;
+			background: #a1a1a6;
+			position: absolute;
+			margin-left: -8px;
+			margin-top: -5px;
+			cursor: pointer;
+			outline: none;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+}
+
+#birds-player {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 2vh auto;
+
+	#birds-volume {
+		position: relative;
+		margin: 0 auto;
+		height: 5px;
+		width: 100%;
+		background: #1d1d1f;
+		border-radius: 15px;
+
+		.ui-slider-range-min {
+			height: 5px;
+			width: 100%;
+			position: absolute;
+			background: $primary-color;
+			border: none;
+			border-radius: 10px;
+			outline: none;
+		}
+
+		.ui-slider-handle {
+			width: 14px;
+			height: 14px;
+			border-radius: 20px;
+			background: #a1a1a6;
+			position: absolute;
+			margin-left: -8px;
+			margin-top: -5px;
+			cursor: pointer;
+			outline: none;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+}

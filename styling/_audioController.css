@@ -1,9 +1,3 @@
-body {
-  background: #111111;
-  font-family: Raleway;
-  margin: 0;
-}
-
 .brown-noise {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,4 +178,4 @@ body {
 #birds-player #birds-volume .ui-slider-handle:hover {
   background: white;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=audioController.css.map */
