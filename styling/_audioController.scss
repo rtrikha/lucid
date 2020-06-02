@@ -1,7 +1,3 @@
-$slider-foreground: #6e6e73;
-$slider-background: #9b9b9b;
-$slider-knob-foreground: #1a1a1a;
-$slider-knob-hover: #fff;
 $bar-width: 10vw;
 $bar-height: 5px;
 $margin-between: 2vh;
@@ -10,7 +6,7 @@ $slider-margin-top: -5px; //same as bar height
 
 
 .noise {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	width: $bar-width;
 	padding-top: 10vh;

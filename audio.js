@@ -32,10 +32,10 @@ rainSound.id = 'rainSound';
 thunderSound.id = 'thunderSound';
 birdsSound.id = 'birdsSound';
 
-playAudio(waveSound, '/resources/audio/waves.mp3', 0.5, setVolumeWave);
-playAudio(rainSound, '/resources/audio/rain.mp3', 0.5, setVolumeRain);
-playAudio(thunderSound, '/resources/audio/thunder.mp3', 0.5, setVolumeRain);
-playAudio(birdsSound, '/resources/audio/birds.mp3', 0.5, setVolumeBirds);
+// playAudio(waveSound, '/resources/audio/waves.mp3', 0.5, setVolumeWave);
+// playAudio(rainSound, '/resources/audio/rain.mp3', 0.5, setVolumeRain);
+// playAudio(thunderSound, '/resources/audio/thunder.mp3', 0.5, setVolumeRain);
+// playAudio(birdsSound, '/resources/audio/birds.mp3', 0.5, setVolumeBirds);
 
 function playAudio(id, fileName, myVolume, volumeControl) {
 	id.src = fileName;

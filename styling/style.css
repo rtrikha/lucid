@@ -20,6 +20,12 @@
   --text-secondary: #777777;
 }
 
+@font-face {
+  src: url(/resources/fonts/Inter-Light.otf);
+  font-family: Inter;
+  font-weight: 600;
+}
+
 body {
   background: var(--background-primary);
   font-family: Raleway;
@@ -27,9 +33,7 @@ body {
 }
 
 .noise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -205,5 +209,16 @@ body {
 
 #birds-player #birds-volume .ui-slider-handle:hover {
   background: var(--hover-primary);
+}
+
+#content {
+  font-size: 14px;
+  font-family: Inter;
+  color: var(--text-primary);
+  caret-color: var(--hover-primary);
+}
+
+#content:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
