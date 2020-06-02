@@ -1,177 +1,136 @@
-$primary-color: #6e6e73;
+$slider-foreground: #6e6e73;
+$slider-background: #9b9b9b;
+$slider-knob-foreground: #1a1a1a;
+$slider-knob-hover: #fff;
+$bar-width: 10vw;
+$bar-height: 5px;
+$margin-between: 2vh;
+$slider-handler: 14px;
+$slider-margin-top: -5px; //same as bar height
 
 
-.brown-noise {
+.noise {
 	display: flex;
-    flex-direction: column;
-    width: 8vw;
-    padding-top: 10vh;
-    padding-left: 10vw;
+	flex-direction: column;
+	width: $bar-width;
+	padding-top: 10vh;
+	padding-left: 10vw;
 }
 
-#wave-player {
+@mixin playerSupporter {
 	width: 100%;
 	height: auto;
 	position: relative;
-	margin: 2vh auto;
+	margin: $margin-between auto;
+}
+
+@mixin volumeSupporter {
+	position: relative;
+	margin: 0 auto;
+	height: $bar-height;
+	width: 100%;
+	background: var(--background-secondary);
+	border-radius: 15px;
+}
+
+@mixin sliderSupporter {
+	height: $bar-height;
+	width: 100%;
+	position: absolute;
+	background: var(--background-tertiary);
+	border: none;
+	border-radius: 10px;
+	outline: none;
+}
+
+@mixin knobSupporter {
+	width: $slider-handler;
+	height: $slider-handler;
+	border-radius: 50%;
+	background: var(--accent-secondary);
+	position: absolute;
+	margin-left: -8px;
+	margin-top: $slider-margin-top;
+	cursor: pointer;
+	outline: none;
+}
+
+
+#wave-player {
+	@include playerSupporter();
 
 	#wave-volume {
-		position: relative;
-		margin: 0 auto;
-		height: 5px;
-		width: 100%;
-		background: #1d1d1f;
-		border-radius: 15px;
+		@include volumeSupporter();
 
 		.ui-slider-range-min {
-			height: 5px;
-			width: 100%;
-			position: absolute;
-			background: $primary-color;
-			border: none;
-			border-radius: 10px;
-			outline: none;
+			@include sliderSupporter();
 		}
 
 		.ui-slider-handle {
-			width: 14px;
-			height: 14px;
-			border-radius: 20px;
-			background: #a1a1a6;
-			position: absolute;
-			margin-left: -8px;
-			margin-top: -5px;
-			cursor: pointer;
-			outline: none;
+			@include knobSupporter();
 
 			&:hover {
-				background: white;
+				background:var(--hover-primary);
 			}
 		}
 	}
 }
 
 #rain-player {
-	width: 100%;
-	height: auto;
-	position: relative;
-	margin: 2vh auto;
+	@include playerSupporter();
 
 	#rain-volume {
-		position: relative;
-		margin: 0 auto;
-		height: 5px;
-		width: 100%;
-		background: #1d1d1f;
-		border-radius: 15px;
+		@include volumeSupporter();
 
 		.ui-slider-range-min {
-			height: 5px;
-			width: 100%;
-			position: absolute;
-			background: $primary-color;
-			border: none;
-			border-radius: 10px;
-			outline: none;
+			@include sliderSupporter();
 		}
 
 		.ui-slider-handle {
-			width: 14px;
-			height: 14px;
-			border-radius: 20px;
-			background: #a1a1a6;
-			position: absolute;
-			margin-left: -8px;
-			margin-top: -5px;
-			cursor: pointer;
-			outline: none;
+			@include knobSupporter();
 
 			&:hover {
-				background: white;
+				background: var(--hover-primary);
 			}
 		}
 	}
 }
 
 #thunder-player {
-	width: 100%;
-	height: auto;
-	position: relative;
-	margin: 2vh auto;
+	@include playerSupporter();
 
 	#thunder-volume {
-		position: relative;
-		margin: 0 auto;
-		height: 5px;
-		width: 100%;
-		background: #1d1d1f;
-		border-radius: 15px;
+		@include volumeSupporter();
 
 		.ui-slider-range-min {
-			height: 5px;
-			width: 100%;
-			position: absolute;
-			background: $primary-color;
-			border: none;
-			border-radius: 10px;
-			outline: none;
+			@include sliderSupporter();
 		}
 
 		.ui-slider-handle {
-			width: 14px;
-			height: 14px;
-			border-radius: 20px;
-			background: #a1a1a6;
-			position: absolute;
-			margin-left: -8px;
-			margin-top: -5px;
-			cursor: pointer;
-			outline: none;
+			@include knobSupporter();
 
 			&:hover {
-				background: white;
+				background: var(--hover-primary);
 			}
 		}
 	}
 }
 
 #birds-player {
-	width: 100%;
-	height: auto;
-	position: relative;
-	margin: 2vh auto;
+	@include playerSupporter();
 
 	#birds-volume {
-		position: relative;
-		margin: 0 auto;
-		height: 5px;
-		width: 100%;
-		background: #1d1d1f;
-		border-radius: 15px;
+		@include volumeSupporter();
 
 		.ui-slider-range-min {
-			height: 5px;
-			width: 100%;
-			position: absolute;
-			background: $primary-color;
-			border: none;
-			border-radius: 10px;
-			outline: none;
+			@include sliderSupporter();
 		}
 
 		.ui-slider-handle {
-			width: 14px;
-			height: 14px;
-			border-radius: 20px;
-			background: #a1a1a6;
-			position: absolute;
-			margin-left: -8px;
-			margin-top: -5px;
-			cursor: pointer;
-			outline: none;
+			@include knobSupporter();
 
 			&:hover {
-				background: white;
+				background: var(--hover-primary);
 			}
 		}
 	}
