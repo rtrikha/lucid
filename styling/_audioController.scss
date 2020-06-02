@@ -1,12 +1,15 @@
+$slider-foreground: #4C4C4E;
+$slider-background: #282828;
+$slider-knob-foreground: #A1A1A6;
+$slider-knob-hover: #fff;
 $bar-width: 10vw;
 $bar-height: 5px;
 $margin-between: 2vh;
 $slider-handler: 14px;
 $slider-margin-top: -5px; //same as bar height
 
-
 .noise {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	width: $bar-width;
 	padding-top: 10vh;
@@ -25,7 +28,7 @@ $slider-margin-top: -5px; //same as bar height
 	margin: 0 auto;
 	height: $bar-height;
 	width: 100%;
-	background: var(--background-secondary);
+	background: $slider-background;
 	border-radius: 15px;
 }
 
@@ -33,7 +36,7 @@ $slider-margin-top: -5px; //same as bar height
 	height: $bar-height;
 	width: 100%;
 	position: absolute;
-	background: var(--background-tertiary);
+	background: $slider-foreground;
 	border: none;
 	border-radius: 10px;
 	outline: none;
@@ -43,7 +46,7 @@ $slider-margin-top: -5px; //same as bar height
 	width: $slider-handler;
 	height: $slider-handler;
 	border-radius: 50%;
-	background: var(--accent-secondary);
+	background: $slider-knob-foreground;
 	position: absolute;
 	margin-left: -8px;
 	margin-top: $slider-margin-top;
@@ -66,7 +69,7 @@ $slider-margin-top: -5px; //same as bar height
 			@include knobSupporter();
 
 			&:hover {
-				background:var(--hover-primary);
+				background:$slider-knob-hover;
 			}
 		}
 	}
@@ -86,7 +89,7 @@ $slider-margin-top: -5px; //same as bar height
 			@include knobSupporter();
 
 			&:hover {
-				background: var(--hover-primary);
+				background: $slider-knob-hover;
 			}
 		}
 	}
@@ -106,7 +109,7 @@ $slider-margin-top: -5px; //same as bar height
 			@include knobSupporter();
 
 			&:hover {
-				background: var(--hover-primary);
+				background: $slider-knob-hover;
 			}
 		}
 	}
@@ -126,7 +129,7 @@ $slider-margin-top: -5px; //same as bar height
 			@include knobSupporter();
 
 			&:hover {
-				background: var(--hover-primary);
+				background: $slider-knob-hover;
 			}
 		}
 	}

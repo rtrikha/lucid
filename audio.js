@@ -10,27 +10,21 @@ function initSlider(id, eventValue) {
 	});
 }
 
+function setterAudio(path,path2) {
+	var x = document.createElement('audio');
+	$(path).append(x);
+	return x.id=path2;
+}
+
 initSlider('#wave-volume', setVolumeWave);
 initSlider('#rain-volume', setVolumeRain);
 initSlider('#thunder-volume', setVolumeThunder);
 initSlider('#birds-volume', setVolumeBirds);
 
-var waveSound = document.createElement('audio');
-$('#wave-player').append(waveSound);
-
-var rainSound = document.createElement('audio');
-$('#rain-player').append(rainSound);
-
-var thunderSound = document.createElement('audio');
-$('#thunder-player').append(thunderSound);
-
-var birdsSound = document.createElement('audio');
-$('#birds-player').append(birdsSound);
-
-waveSound.id = 'waveSound';
-rainSound.id = 'rainSound';
-thunderSound.id = 'thunderSound';
-birdsSound.id = 'birdsSound';
+setterAudio('#wave-player','waveSound');
+setterAudio('#rain-player', 'rainSound');
+setterAudio('#thunder-player','thunderSound');
+setterAudio('#birds-player','birdsSound');
 
 // playAudio(waveSound, '/resources/audio/waves.mp3', 0.5, setVolumeWave);
 // playAudio(rainSound, '/resources/audio/rain.mp3', 0.5, setVolumeRain);

@@ -1,4 +1,3 @@
-document.getElementById("content").focus();
 
 
 

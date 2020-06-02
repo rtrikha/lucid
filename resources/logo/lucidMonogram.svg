@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>final</title>
+    <desc>Created with Sketch.</desc>
+    <g id="lucid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-104.000000, -85.000000)">
+            <g id="final" transform="translate(104.000000, 85.000000)">
+                <g id="left-top">
+                    <ellipse id="Oval" stroke="#FFFFFF" stroke-width="3.06382979" cx="16.8510638" cy="17.106383" rx="15.3191489" ry="15.5744681"></ellipse>
+                    <rect id="Rectangle" fill="#FFFFFF" x="14.2978723" y="1.19148936" width="3.06382979" height="30.6382979"></rect>
+                </g>
+                <g id="right-bottom" transform="translate(14.297872, 13.787234)">
+                    <ellipse id="Oval-Copy-96" stroke="#FFFFFF" stroke-width="3.06382979" cx="16.8510638" cy="17.106383" rx="15.3191489" ry="15.5744681"></ellipse>
+                    <rect id="Rectangle" fill="#FFFFFF" x="16.3404255" y="1.70212766" width="3.06382979" height="30.6382979"></rect>
+                </g>
+                <circle id="on" fill="#AFFEC7" cx="24" cy="24" r="2.04255319"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
