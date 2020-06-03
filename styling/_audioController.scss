@@ -9,7 +9,7 @@ $slider-handler: 18px;
 $slider-margin-top: -8px; //same as bar height
 
 .noise {
-	display: flex;
+	display: none;
 	flex-direction: row;
 	width: $bar-width;
 	height: 24vh;
@@ -21,7 +21,6 @@ $slider-margin-top: -8px; //same as bar height
 	height: 100%;
 	position: relative;
 	margin: $margin-between auto;
-	margin-right: 2vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -65,6 +64,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #wave-player {
 	@include playerSupporter();
+	margin-right: 2vw;
 
 	#wave-volume {
 		@include volumeSupporter();
@@ -86,6 +86,8 @@ $slider-margin-top: -8px; //same as bar height
 
 #rain-player {
 	@include playerSupporter();
+	margin-right: 2vw;
+
 
 	#rain-volume {
 		@include volumeSupporter();
@@ -106,6 +108,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #thunder-player {
 	@include playerSupporter();
+	margin-right: 2vw;
 
 	#thunder-volume {
 		@include volumeSupporter();
@@ -126,6 +129,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #birds-player {
 	@include playerSupporter();
+	margin-right: 2vw;
 
 	#birds-volume {
 		@include volumeSupporter();
@@ -146,8 +150,29 @@ $slider-margin-top: -8px; //same as bar height
 
 #chorus-player {
 	@include playerSupporter();
+	margin-right: 2vw;
 
 	#chorus-volume {
+		@include volumeSupporter();
+
+		.ui-slider-range-min {
+			@include sliderSupporter();
+		}
+
+		.ui-slider-handle {
+			@include knobSupporter();
+
+			&:hover {
+				background: $slider-knob-hover;
+			}
+		}
+	}
+}
+
+#morning-player {
+	@include playerSupporter();
+
+	#morning-volume {
 		@include volumeSupporter();
 
 		.ui-slider-range-min {
@@ -167,4 +192,43 @@ $slider-margin-top: -8px; //same as bar height
 .icon{
 	transform: scale(0.8);
 	margin-top: 2vh;
+}
+
+@media screen and (max-width: 900px) {
+	.noise {
+		transform: scale(0.9);
+	}
+	#wave-player{
+		margin-right: 3vw;
+	}
+	#rain-player{
+		margin-right: 3vw;
+	}
+	#thunder-player{
+		margin-right: 3vw;
+	}
+	#birds-player{
+		margin-right: 3vw;
+	}
+	#chorus-player{
+		margin-right: 3vw;
+	}
+}
+
+@media screen and (max-width: 720px){
+	.noise{
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 560px){
+	.noise{
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 430px){
+	.noise{
+		width: 100%;
+	}
 }

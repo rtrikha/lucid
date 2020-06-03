@@ -23,12 +23,14 @@ initSlider('#rain-volume', setVolumeRain);
 initSlider('#thunder-volume', setVolumeThunder);
 initSlider('#birds-volume', setVolumeBirds);
 initSlider('#chorus-volume', setVolumeChorus);
+initSlider('#morning-volume', setVolumeMorning);
 
 setterAudio('#wave-player', 'waveSound');
 setterAudio('#rain-player', 'rainSound');
 setterAudio('#thunder-player', 'thunderSound');
 setterAudio('#birds-player', 'birdsSound');
 setterAudio('#chorus-player', 'chorusSound');
+setterAudio('#morning-player', 'morningSound');
 
 function playAllAudio() {
 	playAudio(waveSound, '/resources/audio/waves.mp3', 0.5, setVolumeWave);
@@ -36,6 +38,7 @@ function playAllAudio() {
 	playAudio(thunderSound, '/resources/audio/thunder.mp3', 0.5, setVolumeRain);
 	playAudio(birdsSound, '/resources/audio/birds.mp3', 0.5, setVolumeBirds);
 	playAudio(chorusSound, '/resources/audio/chorus.mp3', 0.5, setVolumeChorus);
+	playAudio(morningSound, '/resources/audio/morning.mp3', 0.5, setVolumeMorning);
 
 }
 
@@ -69,4 +72,9 @@ function setVolumeBirds(myVolume) {
 function setVolumeChorus(myVolume) {
 	var chorusSound = document.getElementById('chorusSound');
 	chorusSound.volume = myVolume;
+}
+
+function setVolumeMorning(myVolume) {
+	var morningSound = document.getElementById('morningSound');
+	morningSound.volume = myVolume;
 }

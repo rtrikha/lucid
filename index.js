@@ -27,6 +27,7 @@ function revealBreathe() {
 	document.getElementById('breathe').style.display = 'block';
 	document.getElementById('breathe-wrapper').style.opacity = '1';
 	document.getElementById('breathe-wrapper').style.transition = 'opacity 6s';
+	document.getElementById('noise').style.display = 'flex';
 
 	changeColorofBreathe('#4C4C4E', '#282828', 0);
 	changeColorofBreathe('#50635F', '#303F40', 12000);

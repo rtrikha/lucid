@@ -7,7 +7,7 @@
 }
 
 #breathe-wrapper {
-	position: absolute;
+  position: absolute;
   width: 100%;
   opacity: 0;
 }
@@ -127,19 +127,27 @@
 	}
 }
 
-@keyframes fade-from-none {
-	0% {
-		display: none;
-		opacity: 0;
-	}
 
-	1% {
-		display: block;
-		opacity: 0;
+@media screen and (max-width: 900px) {
+	#breathe-wrapper {
+		transform: scale(0.8);
 	}
+}
 
-	100% {
-		display: block;
-		opacity: 1;
+@media screen and (max-width: 720px) {
+	#breathe-wrapper {
+		transform: scale(0.7);
+	}
+}
+
+@media screen and (max-width: 560px) {
+	#breathe-wrapper {
+		transform: scale(0.7);
+		margin-top: 6vh;
+	}
+}
+@media screen and (max-width: 430px) {
+	#breathe-wrapper {
+		transform: scale(0.6);
 	}
 }

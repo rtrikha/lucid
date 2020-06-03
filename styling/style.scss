@@ -33,7 +33,7 @@ body {
 
 .body-wrapper {
 	position: relative;
-	height: 80vh;
+	height: auto;
 	.breathe-wrapper {
 		margin-top: 12vh;
 		transform: scale(1.2);
@@ -47,7 +47,7 @@ body {
 }
 
 .text-context {
-	width: 50%;
+	width: 60%;
 	.heading {
 		color: $text-primary;
 		font-family: Space-Mono;
@@ -56,7 +56,7 @@ body {
 		letter-spacing: -2px;
 	}
 
-	.subheading{
+	.subheading {
 		color: $text-secondary;
 		font-family: Space-Mono;
 		font-size: 13px;
@@ -71,7 +71,7 @@ body {
 		animation-delay: 1.4s;
 	}
 
-	.play-audio{
+	.play-audio {
 		color: $text-primary;
 		opacity: 0;
 		width: max-content;
@@ -86,31 +86,103 @@ body {
 		animation-delay: 1.8s;
 		cursor: pointer;
 
-		&:hover{
-			color: #61BEA2;
+		&:hover {
+			color: #61bea2;
 		}
-
 	}
 }
 
-.noise-wrapper{
-	width: 50%;
+.noise-wrapper {
+	width: 40%;
 	display: flex;
 	opacity: 0;
 }
 
-.dud{
+.dud {
 	color: $text-tertiary;
 }
 
-@keyframes moveTextFromBottom{
-	from{
+@keyframes moveTextFromBottom {
+	from {
 		transform: translateY(1vh);
 		opacity: 0;
 	}
-	to{
+	to {
 		transform: translateY(0vh);
 		opacity: 1;
 		display: block;
 	}
+}
+
+@media screen and (max-width: 900px) {
+	.main-wrapper{
+		width: 88vw;
+	}
+	.footer-nav{
+		width: 88%;
+	}
+	.text-context {
+		width: 60%;
+		.heading {
+			font-size: 22px;
+		}
+		.subheading {
+			font-size: 12px;
+			letter-spacing: -0.2px;
+			line-height: 22px;
+			padding-top: 1vh;
+		}
+
+		.play-audio {
+			margin-top: 6vh;
+		}
+	}
+}
+
+@media screen and (max-width: 720px){
+	.text-context {
+		width: 100%;
+
+		.heading {
+			text-align: center;
+		}
+
+		.subheading {
+			text-align: center;
+		}
+
+		.play-audio {
+			margin: 0 auto;
+			margin-top: 6vh;
+		}
+	}
+
+	.header-nav{
+		padding-top: 6vh;
+	}
+	.body-context-wrapper {
+		flex-direction: column;
+	}
+
+	.noise-wrapper{
+		width: 100%;
+		padding-top: 8vh;
+		margin-bottom: 8vh;
+	}
+
+}
+
+@media screen and (max-width: 560px){
+
+	#monogram{
+		transform: scale(0.9);
+	}
+
+	.header-nav{
+		padding-top: 4vh;
+	}
+	.body-context-wrapper {
+		padding-top: 36vh;
+	}
+
 }
