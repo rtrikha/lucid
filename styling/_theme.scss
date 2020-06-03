@@ -1,0 +1,20 @@
+$background-primary: #111111;
+$background-secondary: #282828;
+$text-primary: #ffffff;
+$text-secondary: #a1a1a6;
+$text-tertiary: #4c4c4e;
+
+@font-face {
+	src: url(/resources/fonts/SpaceMono-Regular.ttf);
+	font-family: Space-Mono;
+	font-weight: 400;
+}
+@font-face {
+	src: url(/resources/fonts/SpaceMono-Bold.ttf);
+	font-family: Space-Mono;
+	font-weight: 600;
+}
+@font-face {
+	src: url(/resources/fonts/Carbon.ttf);
+	font-family: Carbon;
+}

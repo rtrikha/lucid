@@ -3,22 +3,22 @@ $slider-background: #282828;
 $slider-knob-foreground: #A1A1A6;
 $slider-knob-hover: #fff;
 $bar-width: 10vw;
-$bar-height: 5px;
+$bar-height: 4px;
 $margin-between: 2vh;
 $slider-handler: 14px;
-$slider-margin-top: -5px; //same as bar height
+$slider-margin-top: -10px; //same as bar height
 
 .noise {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	width: $bar-width;
 	padding-top: 10vh;
 	padding-left: 10vw;
 }
 
 @mixin playerSupporter {
-	width: 100%;
-	height: auto;
+	width: 4px;
+	height: 100px;
 	position: relative;
 	margin: $margin-between auto;
 }
@@ -26,8 +26,8 @@ $slider-margin-top: -5px; //same as bar height
 @mixin volumeSupporter {
 	position: relative;
 	margin: 0 auto;
-	height: $bar-height;
-	width: 100%;
+	height: 100px;
+	width: $bar-height;
 	background: $slider-background;
 	border-radius: 15px;
 }
@@ -35,6 +35,7 @@ $slider-margin-top: -5px; //same as bar height
 @mixin sliderSupporter {
 	height: $bar-height;
 	width: 100%;
+	bottom: 0;
 	position: absolute;
 	background: $slider-foreground;
 	border: none;
@@ -48,8 +49,8 @@ $slider-margin-top: -5px; //same as bar height
 	border-radius: 50%;
 	background: $slider-knob-foreground;
 	position: absolute;
-	margin-left: -8px;
-	margin-top: $slider-margin-top;
+	margin-left: -5px;
+	margin-bottom: $slider-margin-top;
 	cursor: pointer;
 	outline: none;
 }

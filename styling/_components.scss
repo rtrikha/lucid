@@ -1,0 +1,31 @@
+@mixin nav-text {
+	color: $text-tertiary;
+	font-family: Carbon;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 12px;
+	margin-left: 3vw;
+	margin-right: 0;
+	cursor: pointer;
+
+	&:hover {
+		color: $text-secondary;
+	}
+}
+
+@mixin header-nav {
+	position: relative;
+	display: flex;
+	padding-top: 8vh;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@mixin footer-nav {
+	display: flex;
+	position: absolute;
+	bottom: 4vh;
+	width: 100%;
+	justify-content: flex-end;
+}

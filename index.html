@@ -11,27 +11,44 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="header">
+			<div class="header-nav">
 				<img src="./resources/logo/lucidMonogram.svg" alt="lucidMonogram">
+				<a class="nav-text" onclick="playAllAudio()">About</a>
 			</div>
+			<div class="body-wrapper">
+				<div class="breathe-wrapper">
+					<div class="breathe">
+						<div class="circle" id="c1"></div>
+						<div class="circle" id="c2"></div>
+						<div class="circle" id="c3"></div>
+						<div class="circle" id="c4"></div>
+						<div class="circle" id="c5"></div>
+						<div class="circle" id="c6"></div>
+					  </div>
+				</div>
 
-		</div>
-		<div class="noise">
-			<div id="wave-player">
-				<div id="wave-volume"></div>
+				<div class="noise">
+					<div id="wave-player">
+						<div id="wave-volume"></div>
+					</div>
+		
+					<div id="rain-player">
+						<div id="rain-volume"></div>
+					</div>
+		
+					<div id="thunder-player">
+						<div id="thunder-volume"></div>
+					</div>
+		
+					<div id="birds-player">
+						<div id="birds-volume"></div>
+					</div>
+				</div>
 			</div>
-
-			<div id="rain-player">
-				<div id="rain-volume"></div>
+			<div class="footer-nav">
+				<a class="nav-text" href="https://github.com/rtrikha/lucid" target="blank">GitHub</a>
 			</div>
-
-			<div id="thunder-player">
-				<div id="thunder-volume"></div>
-			</div>
-
-			<div id="birds-player">
-				<div id="birds-volume"></div>
-			</div>
+			
 		</div>
 	</body>
 	<script src="/audio.js"></script>

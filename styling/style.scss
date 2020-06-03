@@ -1,37 +1,42 @@
-$background-primary: #111111;
-
-@font-face {
-	src: url(/resources/fonts/SpaceMono-Regular.ttf);
-	font-family: Space-Mono;
-	font-weight: 400;
-}
-@font-face {
-	src: url(/resources/fonts/SpaceMono-Bold.ttf);
-	font-family: Space-Mono;
-	font-weight: 600;
-}
-@font-face {
-	src: url(/resources/fonts/Carbon.ttf);
-	font-family: Carbon;
-}
-
+@import './audioController';
+@import './theme';
+@import './components';
+@import './breathe';
 
 body {
 	background: $background-primary;
 	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-@import './audioController';
-
-.main-wrapper{
+.main-wrapper {
 	position: relative;
 	margin: 0 auto;
 	width: 80vw;
 	height: 100vh;
 }
 
-.header{
-	position: relative;
-	padding-top: 8vh;
-	width: 100%;
+.header-nav {
+	@include header-nav;
+	.nav-text {
+		@include nav-text;
+	}
+}
+
+.footer-nav {
+	@include footer-nav;
+	.nav-text {
+		@include nav-text;
+	}
+}
+
+
+.body-wrapper
+{	position: relative;
+	height: 80vh;
+	.breathe-wrapper{
+		margin-top: 24vh;
+		transform: scale(1.4);
+	}
 }
