@@ -4,8 +4,8 @@ function initSlider(id, eventValue) {
 		max: 100,
 		value: 50,
 		range: 'min',
-		orientation:"vertical",
-		reversed : false,
+		orientation: 'vertical',
+		reversed: false,
 		slide: function (event, ui) {
 			eventValue(ui.value / 100);
 		},
@@ -22,17 +22,21 @@ initSlider('#wave-volume', setVolumeWave);
 initSlider('#rain-volume', setVolumeRain);
 initSlider('#thunder-volume', setVolumeThunder);
 initSlider('#birds-volume', setVolumeBirds);
+initSlider('#chorus-volume', setVolumeChorus);
 
 setterAudio('#wave-player', 'waveSound');
 setterAudio('#rain-player', 'rainSound');
 setterAudio('#thunder-player', 'thunderSound');
 setterAudio('#birds-player', 'birdsSound');
+setterAudio('#chorus-player', 'chorusSound');
 
 function playAllAudio() {
 	playAudio(waveSound, '/resources/audio/waves.mp3', 0.5, setVolumeWave);
 	playAudio(rainSound, '/resources/audio/rain.mp3', 0.5, setVolumeRain);
 	playAudio(thunderSound, '/resources/audio/thunder.mp3', 0.5, setVolumeRain);
 	playAudio(birdsSound, '/resources/audio/birds.mp3', 0.5, setVolumeBirds);
+	playAudio(chorusSound, '/resources/audio/chorus.mp3', 0.5, setVolumeChorus);
+
 }
 
 function playAudio(id, fileName, myVolume, volumeControl) {
@@ -60,4 +64,9 @@ function setVolumeThunder(myVolume) {
 function setVolumeBirds(myVolume) {
 	var birdsSound = document.getElementById('birdsSound');
 	birdsSound.volume = myVolume;
+}
+
+function setVolumeChorus(myVolume) {
+	var chorusSound = document.getElementById('chorusSound');
+	chorusSound.volume = myVolume;
 }

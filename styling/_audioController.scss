@@ -2,31 +2,34 @@ $slider-foreground: #4C4C4E;
 $slider-background: #282828;
 $slider-knob-foreground: #A1A1A6;
 $slider-knob-hover: #fff;
-$bar-width: 10vw;
-$bar-height: 4px;
-$margin-between: 2vh;
-$slider-handler: 14px;
-$slider-margin-top: -10px; //same as bar height
+$bar-width: max-content;
+$bar-height: 6px;
+$margin-between: 0vh;
+$slider-handler: 18px;
+$slider-margin-top: -8px; //same as bar height
 
 .noise {
 	display: flex;
 	flex-direction: row;
 	width: $bar-width;
-	padding-top: 10vh;
-	padding-left: 10vw;
+	height: 24vh;
+	margin: auto;
 }
 
 @mixin playerSupporter {
-	width: 4px;
-	height: 100px;
+	width: 100%;
+	height: 100%;
 	position: relative;
 	margin: $margin-between auto;
+	margin-right: 2vw;
+	display: flex;
+	flex-direction: column;
 }
 
 @mixin volumeSupporter {
 	position: relative;
 	margin: 0 auto;
-	height: 100px;
+	height: 100%;
 	width: $bar-height;
 	background: $slider-background;
 	border-radius: 15px;
@@ -49,10 +52,14 @@ $slider-margin-top: -10px; //same as bar height
 	border-radius: 50%;
 	background: $slider-knob-foreground;
 	position: absolute;
-	margin-left: -5px;
+	margin-left: -6px;
 	margin-bottom: $slider-margin-top;
 	cursor: pointer;
 	outline: none;
+}
+
+.ui-slider-handle:hover ~ .ui-slider-range-min{
+	background: yellow;
 }
 
 
@@ -72,6 +79,7 @@ $slider-margin-top: -10px; //same as bar height
 			&:hover {
 				background:$slider-knob-hover;
 			}
+
 		}
 	}
 }
@@ -134,4 +142,29 @@ $slider-margin-top: -10px; //same as bar height
 			}
 		}
 	}
+}
+
+#chorus-player {
+	@include playerSupporter();
+
+	#chorus-volume {
+		@include volumeSupporter();
+
+		.ui-slider-range-min {
+			@include sliderSupporter();
+		}
+
+		.ui-slider-handle {
+			@include knobSupporter();
+
+			&:hover {
+				background: $slider-knob-hover;
+			}
+		}
+	}
+}
+
+.icon{
+	transform: scale(0.8);
+	margin-top: 2vh;
 }

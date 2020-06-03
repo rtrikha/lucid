@@ -31,12 +31,86 @@ body {
 	}
 }
 
-
-.body-wrapper
-{	position: relative;
+.body-wrapper {
+	position: relative;
 	height: 80vh;
-	.breathe-wrapper{
-		margin-top: 24vh;
-		transform: scale(1.4);
+	.breathe-wrapper {
+		margin-top: 12vh;
+		transform: scale(1.2);
+	}
+}
+
+.body-context-wrapper {
+	display: flex;
+	position: relative;
+	padding-top: 42vh;
+}
+
+.text-context {
+	width: 50%;
+	.heading {
+		color: $text-primary;
+		font-family: Space-Mono;
+		font-weight: 400;
+		font-size: 24px;
+		letter-spacing: -2px;
+	}
+
+	.subheading{
+		color: $text-secondary;
+		font-family: Space-Mono;
+		font-size: 13px;
+		letter-spacing: -0.2px;
+		line-height: 24px;
+		padding-top: 1vh;
+		opacity: 0;
+		animation-name: moveTextFromBottom;
+		animation-duration: 0.4s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+		animation-delay: 1.4s;
+	}
+
+	.play-audio{
+		color: $text-primary;
+		opacity: 0;
+		width: max-content;
+		font-family: Carbon;
+		text-transform: uppercase;
+		position: relative;
+		margin-top: 8vh;
+		animation-name: moveTextFromBottom;
+		animation-duration: 0.4s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+		animation-delay: 1.8s;
+		cursor: pointer;
+
+		&:hover{
+			color: #61BEA2;
+		}
+
+	}
+}
+
+.noise-wrapper{
+	width: 50%;
+	display: flex;
+	opacity: 0;
+}
+
+.dud{
+	color: $text-tertiary;
+}
+
+@keyframes moveTextFromBottom{
+	from{
+		transform: translateY(1vh);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0vh);
+		opacity: 1;
+		display: block;
 	}
 }

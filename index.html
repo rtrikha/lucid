@@ -12,45 +12,72 @@
 	<body>
 		<div class="main-wrapper">
 			<div class="header-nav">
-				<img src="./resources/logo/lucidMonogram.svg" alt="lucidMonogram">
-				<a class="nav-text" onclick="playAllAudio()">About</a>
+				<img src="./resources/logo/lucidMonogram.svg" alt="lucidMonogram" />
+				<a class="nav-text">About</a>
 			</div>
 			<div class="body-wrapper">
-				<div class="breathe-wrapper">
-					<div class="breathe">
+				<div class="breathe-wrapper" id="breathe-wrapper">
+					<div class="breathe" id="breathe">
 						<div class="circle" id="c1"></div>
 						<div class="circle" id="c2"></div>
 						<div class="circle" id="c3"></div>
 						<div class="circle" id="c4"></div>
 						<div class="circle" id="c5"></div>
 						<div class="circle" id="c6"></div>
-					  </div>
+					</div>
 				</div>
 
-				<div class="noise">
-					<div id="wave-player">
-						<div id="wave-volume"></div>
+				<div class="body-context-wrapper">
+					<div class="text-context">
+						<div class="heading" id="typed-strings"></div>
+						<div class="subheading">
+							Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and
+							relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.
+						</div>
+						<div class="play-audio" onclick="playAllAudio(); revealBreathe()">
+							start listening
+						</div>
 					</div>
-		
-					<div id="rain-player">
-						<div id="rain-volume"></div>
-					</div>
-		
-					<div id="thunder-player">
-						<div id="thunder-volume"></div>
-					</div>
-		
-					<div id="birds-player">
-						<div id="birds-volume"></div>
+					<div class="noise-wrapper" id="noise-wrapper">
+						<div class="noise">
+							<div id="wave-player">
+								<div id="wave-volume"></div>
+								<img class = "icon" src="./resources/icons/waves.svg" alt="">
+							</div>
+
+							<div id="rain-player">
+								<div id="rain-volume"></div>
+								<img class = "icon" src="./resources/icons/rain.svg" alt="">
+
+							</div>
+
+							<div id="thunder-player">
+								<div id="thunder-volume"></div>
+								<img class = "icon" src="./resources/icons/thunder.svg" alt="">
+
+							</div>
+
+							<div id="birds-player">
+								<div id="birds-volume"></div>
+								<img class = "icon" src="./resources/icons/bird.svg" alt="">
+
+							</div>
+
+							<div id="chorus-player">
+								<div id="chorus-volume"></div>
+								<img class = "icon" src="./resources/icons/special.svg" alt="">
+
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="footer-nav">
 				<a class="nav-text" href="https://github.com/rtrikha/lucid" target="blank">GitHub</a>
 			</div>
-			
 		</div>
 	</body>
 	<script src="/audio.js"></script>
 	<script src="/index.js"></script>
+	<script src="/blackBox.js"></script>
 </html>

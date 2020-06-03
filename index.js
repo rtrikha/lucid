@@ -10,23 +10,28 @@
 function drawCircle(circleID, color) {
 	document.getElementById(circleID).style.background = color;
 }
-function changeColorofBreathe(oddColor,evenColor,time){
-    setTimeout(function () {
-        drawCircle('c1', oddColor);
-        drawCircle('c2', evenColor);
-        drawCircle('c3', oddColor);
-        drawCircle('c4', evenColor);
-        drawCircle('c5', oddColor);
-        drawCircle('c6', evenColor);
-    }, time);
+function changeColorofBreathe(oddColor, evenColor, time) {
+	setTimeout(function () {
+		drawCircle('c1', oddColor);
+		drawCircle('c2', evenColor);
+		drawCircle('c3', oddColor);
+		drawCircle('c4', evenColor);
+		drawCircle('c5', oddColor);
+		drawCircle('c6', evenColor);
+	}, time);
 }
 
-changeColorofBreathe('#4C4C4E','#282828',0);
-changeColorofBreathe('#50635F','#303F40',12000);
-changeColorofBreathe('#53796E','#385658',24000);
-changeColorofBreathe('#589080','#416D70',36000);
-changeColorofBreathe('#5CA791','#498488',48000);
-changeColorofBreathe('#61BEA2','#529CA0',60000);
+function revealBreathe() {
+	document.getElementById('noise-wrapper').style.opacity = '1';
+	document.getElementById('noise-wrapper').style.transition = 'opacity 0.7s';
+	document.getElementById('breathe').style.display = 'block';
+	document.getElementById('breathe-wrapper').style.opacity = '1';
+	document.getElementById('breathe-wrapper').style.transition = 'opacity 6s';
 
-
-
+	changeColorofBreathe('#4C4C4E', '#282828', 0);
+	changeColorofBreathe('#50635F', '#303F40', 12000);
+	changeColorofBreathe('#53796E', '#385658', 24000);
+	changeColorofBreathe('#589080', '#416D70', 36000);
+	changeColorofBreathe('#5CA791', '#498488', 48000);
+	changeColorofBreathe('#61BEA2', '#529CA0', 60000);
+}
