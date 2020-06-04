@@ -57,8 +57,12 @@ $slider-margin-top: -8px; //same as bar height
 	outline: none;
 }
 
-.ui-slider-handle:hover ~ .ui-slider-range-min {
-	background: yellow;
+.ui-slider-handle {
+	&:hover {
+		& ~ .ui-slider-range-min {
+			background: yellow;
+		}
+	}
 }
 
 #wave-player {

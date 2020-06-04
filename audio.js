@@ -1,9 +1,9 @@
-var waveVolume = 30;
-var rainVolume = 60;
-var thunderVolume = 80;
-var birdsVolume = 10;
-var windVolume = 50;
-var chorusVolume = 40;
+var waveVolume = 0;
+var rainVolume = 0;
+var thunderVolume = 0;
+var birdsVolume = 0;
+var windVolume = 0;
+var chorusVolume = 0;
 
 function initSlider(id, eventValue, value) {
 	$(id).slider({
@@ -77,6 +77,9 @@ function playAudio(id, fileName, myVolume, volumeControl) {
 	id.setAttribute('loop', 'loop');
 	volumeControl(myVolume / 100);
 	id.play();
+	// id.onloadeddata= () => {
+	// 	console.log('loaded ' + fileName);
+	// }
 }
 
 function setVolumeWave(myVolume) {
