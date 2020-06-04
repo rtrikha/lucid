@@ -1,4 +1,3 @@
-
 var waveVolume = 30;
 var rainVolume = 60;
 var thunderVolume = 80;
@@ -26,16 +25,6 @@ function setterAudio(path, path2) {
 	return (x.id = path2);
 }
 
-function muteAudio() {
-	waveVolume = 0;
-	rainVolume = 0;
-	thunderVolume = 0;
-	birdsVolume = 0;
-	windVolume = 0;
-	chorusVolume = 0;
-}	
-
-
 initSlider('#wave-volume', setVolumeWave, waveVolume);
 initSlider('#rain-volume', setVolumeRain, rainVolume);
 initSlider('#thunder-volume', setVolumeThunder, thunderVolume);
@@ -57,6 +46,30 @@ function playAllAudio() {
 	playAudio(birdsSound, '/resources/audio/birds.mp3', birdsVolume, setVolumeBirds);
 	playAudio(windSound, '/resources/audio/wind.mp3', windVolume, setVolumeWind);
 	playAudio(chorusSound, '/resources/audio/chorus.mp3', chorusVolume, setVolumeChorus);
+}
+
+function audioToggle() {
+	if (document.getElementById('play-audio').innerHTML == 'START LISTENING') {
+		playAllAudio();
+	} else {
+		pauseAllAudio();
+	}
+}
+
+function pauseAllAudio() {
+	pauseAudio(waveSound, '/resources/audio/waves.mp3', waveVolume, setVolumeWave);
+	pauseAudio(rainSound, '/resources/audio/rain.mp3', rainVolume, setVolumeRain);
+	pauseAudio(thunderSound, '/resources/audio/thunder.mp3', thunderVolume, setVolumeThunder);
+	pauseAudio(birdsSound, '/resources/audio/birds.mp3', birdsVolume, setVolumeBirds);
+	pauseAudio(windSound, '/resources/audio/wind.mp3', windVolume, setVolumeWind);
+	pauseAudio(chorusSound, '/resources/audio/chorus.mp3', chorusVolume, setVolumeChorus);
+}
+
+function pauseAudio(id, fileName, myVolume, volumeControl) {
+	id.src = fileName;
+	id.setAttribute('loop', 'loop');
+	volumeControl(myVolume / 100);
+	id.pause();
 }
 
 function playAudio(id, fileName, myVolume, volumeControl) {
@@ -94,4 +107,29 @@ function setVolumeWind(myVolume) {
 function setVolumeChorus(myVolume) {
 	var chorusSound = document.getElementById('chorusSound');
 	chorusSound.volume = myVolume;
+}
+
+function pauseWave() {
+	initSlider('#wave-volume', setVolumeWave, 0);
+	setVolumeWave(0);
+}
+function pauseRain() {
+	initSlider('#rain-volume', setVolumeRain, 0);
+	setVolumeRain(0);
+}
+function pauseThunder() {
+	initSlider('#thunder-volume', setVolumeThunder, 0);
+	setVolumeThunder(0);
+}
+function pauseBirds() {
+	initSlider('#birds-volume', setVolumeBirds, 0);
+	setVolumeBirds(0);
+}
+function pauseWind() {
+	initSlider('#wind-volume', setVolumeWind, 0);
+	setVolumeWind(0);
+}
+function pauseChorus() {
+	initSlider('#chorus-volume', setVolumeChorus, 0);
+	setVolumeChorus(0);
 }

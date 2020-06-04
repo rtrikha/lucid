@@ -324,6 +324,7 @@
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   margin-top: 2vh;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
