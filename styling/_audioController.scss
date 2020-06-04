@@ -1,6 +1,6 @@
-$slider-foreground: #4C4C4E;
+$slider-foreground: #4c4c4e;
 $slider-background: #282828;
-$slider-knob-foreground: #A1A1A6;
+$slider-knob-foreground: #a1a1a6;
 $slider-knob-hover: #fff;
 $bar-width: max-content;
 $bar-height: 6px;
@@ -57,10 +57,9 @@ $slider-margin-top: -8px; //same as bar height
 	outline: none;
 }
 
-.ui-slider-handle:hover ~ .ui-slider-range-min{
+.ui-slider-handle:hover ~ .ui-slider-range-min {
 	background: yellow;
 }
-
 
 #wave-player {
 	@include playerSupporter();
@@ -77,9 +76,8 @@ $slider-margin-top: -8px; //same as bar height
 			@include knobSupporter();
 
 			&:hover {
-				background:$slider-knob-hover;
+				background: $slider-knob-hover;
 			}
-
 		}
 	}
 }
@@ -87,7 +85,6 @@ $slider-margin-top: -8px; //same as bar height
 #rain-player {
 	@include playerSupporter();
 	margin-right: 2vw;
-
 
 	#rain-volume {
 		@include volumeSupporter();
@@ -147,10 +144,29 @@ $slider-margin-top: -8px; //same as bar height
 		}
 	}
 }
+#wind-player {
+	@include playerSupporter();
+	margin-right: 2vw;
+
+	#wind-volume {
+		@include volumeSupporter();
+
+		.ui-slider-range-min {
+			@include sliderSupporter();
+		}
+
+		.ui-slider-handle {
+			@include knobSupporter();
+
+			&:hover {
+				background: $slider-knob-hover;
+			}
+		}
+	}
+}
 
 #chorus-player {
 	@include playerSupporter();
-	margin-right: 2vw;
 
 	#chorus-volume {
 		@include volumeSupporter();
@@ -169,27 +185,7 @@ $slider-margin-top: -8px; //same as bar height
 	}
 }
 
-#morning-player {
-	@include playerSupporter();
-
-	#morning-volume {
-		@include volumeSupporter();
-
-		.ui-slider-range-min {
-			@include sliderSupporter();
-		}
-
-		.ui-slider-handle {
-			@include knobSupporter();
-
-			&:hover {
-				background: $slider-knob-hover;
-			}
-		}
-	}
-}
-
-.icon{
+.icon {
 	transform: scale(0.8);
 	margin-top: 2vh;
 }
@@ -198,37 +194,37 @@ $slider-margin-top: -8px; //same as bar height
 	.noise {
 		transform: scale(0.9);
 	}
-	#wave-player{
+	#wave-player {
 		margin-right: 3vw;
 	}
-	#rain-player{
+	#rain-player {
 		margin-right: 3vw;
 	}
-	#thunder-player{
+	#thunder-player {
 		margin-right: 3vw;
 	}
-	#birds-player{
+	#birds-player {
 		margin-right: 3vw;
 	}
-	#chorus-player{
+	#chorus-player {
 		margin-right: 3vw;
 	}
 }
 
-@media screen and (max-width: 720px){
-	.noise{
+@media screen and (max-width: 720px) {
+	.noise {
 		width: 60%;
 	}
 }
 
-@media screen and (max-width: 560px){
-	.noise{
+@media screen and (max-width: 560px) {
+	.noise {
 		width: 80%;
 	}
 }
 
-@media screen and (max-width: 430px){
-	.noise{
+@media screen and (max-width: 430px) {
+	.noise {
 		width: 100%;
 	}
 }

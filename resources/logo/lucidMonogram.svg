@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="36px" viewBox="0 0 48 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="48px" height="50px" viewBox="0 0 48 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>monogram</title>
+    <title>lucidMonogram</title>
     <desc>Created with Sketch.</desc>
     <g id="lucid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="logo" transform="translate(-191.000000, -197.000000)">
-            <g id="monogram" transform="translate(191.000000, 197.000000)">
-                <polygon id="Path-2" fill="#61BEA2" points="15.1666667 10.6666667 15.1666667 25.6666667 20.8333333 24.1666667 20.8333333 11.3333333"></polygon>
-                <circle id="Oval" stroke="#FFFFFF" stroke-width="3.33333333" cx="30" cy="18" r="16.3333333"></circle>
-                <circle id="Oval-Copy-97" stroke="#FFFFFF" stroke-width="3.33333333" cx="12" cy="18" r="10.3333333"></circle>
+        <g id="Desktop-HD" transform="translate(-192.000000, -190.000000)" stroke="#FFFFFF" stroke-width="1.2">
+            <g id="lucidMonogram" transform="translate(192.000000, 190.000000)">
+                <circle id="Oval" cx="23.8978723" cy="16.5446809" r="15.9446809"></circle>
+                <circle id="Oval-Copy-102" cx="16.5446809" cy="20.2212766" r="15.9446809"></circle>
+                <circle id="Oval-Copy-103" cx="16.5446809" cy="29.412766" r="15.9446809"></circle>
+                <circle id="Oval-Copy-105" cx="31.2510638" cy="20.2212766" r="15.9446809"></circle>
+                <circle id="Oval-Copy-104" cx="31.2510638" cy="29.412766" r="15.9446809"></circle>
+                <circle id="Oval-Copy-101" cx="23.8978723" cy="33.0893617" r="15.9446809"></circle>
             </g>
         </g>
     </g>

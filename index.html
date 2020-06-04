@@ -6,8 +6,7 @@
 		<link rel="stylesheet" href="/styling/style.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-
-		<title>pivot</title>
+		<title>lucid | a mindful experience</title>
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -34,8 +33,8 @@
 							Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and
 							relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.
 						</div>
-						<div class="play-audio" onclick="playAllAudio(); revealBreathe()">
-							start listening
+						<div class="play-audio" id="play-audio" onclick="playAllAudio(); revealBreathe()">
+							START LISTENING
 						</div>
 					</div>
 					<div class="noise-wrapper" id="noise-wrapper">
@@ -63,14 +62,13 @@
 
 							</div>
 
-							<div id="chorus-player">
-								<div id="chorus-volume"></div>
-								<img class = "icon" src="./resources/icons/wind.svg" alt="">
-
+							<div id="wind-player">
+								<div id="wind-volume"></div>
+								<img class = "icon" src="./resources/icons/wind.svg" alt="" onclick="muteAudio()">
 							</div>
 
-							<div id="morning-player">
-								<div id="morning-volume"></div>
+							<div id="chorus-player">
+								<div id="chorus-volume"></div>
 								<img class = "icon" src="./resources/icons/snow.svg" alt="">
 
 							</div>

@@ -44,7 +44,7 @@
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: #4C4C4E;
+  background: #4c4c4e;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -54,7 +54,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #A1A1A6;
+  background: #a1a1a6;
   position: absolute;
   margin-left: -6px;
   margin-bottom: -8px;
@@ -95,7 +95,7 @@
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: #4C4C4E;
+  background: #4c4c4e;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -105,7 +105,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #A1A1A6;
+  background: #a1a1a6;
   position: absolute;
   margin-left: -6px;
   margin-bottom: -8px;
@@ -146,7 +146,7 @@
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: #4C4C4E;
+  background: #4c4c4e;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -156,7 +156,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #A1A1A6;
+  background: #a1a1a6;
   position: absolute;
   margin-left: -6px;
   margin-bottom: -8px;
@@ -197,7 +197,7 @@
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: #4C4C4E;
+  background: #4c4c4e;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -207,7 +207,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #A1A1A6;
+  background: #a1a1a6;
   position: absolute;
   margin-left: -6px;
   margin-bottom: -8px;
@@ -216,6 +216,57 @@
 }
 
 #birds-player #birds-volume .ui-slider-handle:hover {
+  background: #fff;
+}
+
+#wind-player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0vh auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2vw;
+}
+
+#wind-player #wind-volume {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 6px;
+  background: #282828;
+  border-radius: 15px;
+}
+
+#wind-player #wind-volume .ui-slider-range-min {
+  height: 6px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background: #4c4c4e;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+#wind-player #wind-volume .ui-slider-handle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #a1a1a6;
+  position: absolute;
+  margin-left: -6px;
+  margin-bottom: -8px;
+  cursor: pointer;
+  outline: none;
+}
+
+#wind-player #wind-volume .ui-slider-handle:hover {
   background: #fff;
 }
 
@@ -231,7 +282,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
 }
 
 #chorus-player #chorus-volume {
@@ -248,7 +298,7 @@
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: #4C4C4E;
+  background: #4c4c4e;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -258,7 +308,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #A1A1A6;
+  background: #a1a1a6;
   position: absolute;
   margin-left: -6px;
   margin-bottom: -8px;
@@ -267,56 +317,6 @@
 }
 
 #chorus-player #chorus-volume .ui-slider-handle:hover {
-  background: #fff;
-}
-
-#morning-player {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0vh auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#morning-player #morning-volume {
-  position: relative;
-  margin: 0 auto;
-  height: 100%;
-  width: 6px;
-  background: #282828;
-  border-radius: 15px;
-}
-
-#morning-player #morning-volume .ui-slider-range-min {
-  height: 6px;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background: #4C4C4E;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-}
-
-#morning-player #morning-volume .ui-slider-handle {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #A1A1A6;
-  position: absolute;
-  margin-left: -6px;
-  margin-bottom: -8px;
-  cursor: pointer;
-  outline: none;
-}
-
-#morning-player #morning-volume .ui-slider-handle:hover {
   background: #fff;
 }
 

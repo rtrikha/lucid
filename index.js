@@ -7,6 +7,7 @@
 // 	}, 2000);
 // };
 
+
 function drawCircle(circleID, color) {
 	document.getElementById(circleID).style.background = color;
 }
@@ -21,7 +22,15 @@ function changeColorofBreathe(oddColor, evenColor, time) {
 	}, time);
 }
 
+
 function revealBreathe() {
+	
+	if (document.getElementById('play-audio').innerHTML == 'STOP LISTENING') {
+		document.getElementById('play-audio').innerHTML = 'START LISTENING';
+	} else {
+		document.getElementById('play-audio').innerHTML = 'STOP LISTENING';
+	}
+
 	document.getElementById('noise-wrapper').style.opacity = '1';
 	document.getElementById('noise-wrapper').style.transition = 'opacity 0.7s';
 	document.getElementById('breathe').style.display = 'block';
