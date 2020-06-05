@@ -925,7 +925,7 @@ body {
 .loader {
   background-color: #111111;
   position: relative;
-  margin-top: 64%;
+  margin-top: 42vh;
 }
 
 .loader #monogram-loader {
