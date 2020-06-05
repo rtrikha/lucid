@@ -1,0 +1,1 @@
+Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.
