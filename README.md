@@ -1,4 +1,4 @@
-![enter image description here](https://raw.githubusercontent.com/rtrikha/lucid/f4a6c53f5c065d6c787f969664dc5be7a30d70dc/resources/logo/lucidMonogramBigColoured.svg)
+![enter image description here](https://raw.githubusercontent.com/rtrikha/lucid/b9a13c5fc0ec0004e6008881b177bd712707ac91/resources/logo/lucidMonogramBigColoured.svg)
 
 #### What is lucid?
 Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and relaxation.
