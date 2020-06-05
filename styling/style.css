@@ -648,6 +648,8 @@ body {
   margin: 0 auto;
   width: 80vw;
   height: 100vh;
+  display: none;
+  opacity: 0;
 }
 
 .header-nav {
@@ -923,6 +925,7 @@ body {
 .loader {
   background-color: #111111;
   position: relative;
+  margin-top: 64%;
 }
 
 .loader #monogram-loader {
@@ -931,7 +934,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  margin-top: 42vh;
   -webkit-animation: rotateLoader 24s linear infinite;
           animation: rotateLoader 24s linear infinite;
 }

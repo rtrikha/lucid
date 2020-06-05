@@ -5,6 +5,9 @@ var birdsVolume = 10;
 var windVolume = 60;
 var chorusVolume = 50;
 
+var forceLoaderTime = 3000;
+
+
 function initSlider(id, eventValue, value) {
 	$(id).slider({
 		min: 0,
@@ -174,5 +177,5 @@ function loaderDismiss() {
 			callBlackBox();
 		}, 500);
 		dom('typed-strings').style.display = 'block';
-	}, 2000);
+	}, forceLoaderTime);
 }

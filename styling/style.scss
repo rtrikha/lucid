@@ -15,6 +15,8 @@ body {
 	margin: 0 auto;
 	width: 80vw;
 	height: 100vh;
+	display: none;
+	opacity: 0;
 }
 
 .header-nav {
@@ -196,12 +198,12 @@ body {
 .loader {
 	background-color: $background-primary;
 	position: relative;
+	margin-top: 64%;
 
 	#monogram-loader {
 		opacity: 0.1;
 		display: flex;
 		margin: 0 auto;
-		margin-top: 42vh;
-		animation: rotateLoader 24s linear infinite ;
+		animation: rotateLoader 24s linear infinite;
 	}
 }
