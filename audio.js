@@ -143,7 +143,7 @@ function pauseChorus() {
 	setVolumeChorus(0);
 }
 
-//handlins loader
+//handling loader
 
 loaderDismiss();
 
