@@ -1,7 +1,6 @@
 function dom(id) {
 	return document.getElementById(id);
 }
-
 function drawCircle(circleID, color) {
 	document.getElementById(circleID).style.background = color;
 }
@@ -90,6 +89,5 @@ window.smoothScroll = function (target) {
 
 dom('main-wrapper').style.display = 'none';
 dom('main-wrapper').style.opacity = '0';
-
-
 dom('typed-strings').style.display = 'none';
+

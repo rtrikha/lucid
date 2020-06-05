@@ -1,18 +1,9 @@
-//import callBlackBox from './blackBox';
-
 var waveVolume = 50;
 var rainVolume = 40;
 var thunderVolume = 70;
 var birdsVolume = 10;
 var windVolume = 60;
-var chorusVolume = 30;
-
-// var waveVolume = 0;
-// var rainVolume = 0;
-// var thunderVolume = 0;
-// var birdsVolume = 0;
-// var windVolume = 0;
-// var chorusVolume = 0;
+var chorusVolume = 50;
 
 function initSlider(id, eventValue, value) {
 	$(id).slider({
@@ -92,14 +83,10 @@ function playAudio(id, fileName, myVolume, volumeControl) {
 	id.setAttribute('loop', 'loop');
 	volumeControl(myVolume / 100);
 	id.play();
-	id.onloadeddata = () => {
-		console.log('loaded ' + fileName);
-	};
 }
 
 function setVolumeWave(myVolume) {
 	var waveSound = document.getElementById('waveSound');
-	console.log('setVolumeWave -> waveSound', waveSound);
 	waveSound.volume = myVolume;
 }
 
@@ -128,10 +115,9 @@ function setVolumeChorus(myVolume) {
 	chorusSound.volume = myVolume;
 }
 
-function pauseWave(event) {
+function pauseWave() {
 	initSlider('#wave-volume', setVolumeWave, 0);
 	setVolumeWave(0);
-	console.log(event);
 }
 function pauseRain() {
 	initSlider('#rain-volume', setVolumeRain, 0);
@@ -154,12 +140,13 @@ function pauseChorus() {
 	setVolumeChorus(0);
 }
 
-//handlin loader
+//handlins loader
 
 loaderDismiss();
 
 function loadAudio(id, fileName) {
 	id.src = fileName;
+	id.onload;
 	id.onloadeddata = () => {
 		console.log('loaded ' + fileName);
 	};
@@ -176,17 +163,15 @@ function loaderDismiss() {
 	setTimeout(function () {
 		dom('loader').style.opacity = '0';
 		dom('loader').style.transition = 'opacity 0.3s';
-		setTimeout(function(){
+		setTimeout(function () {
 			dom('loader').style.display = 'none';
-		},300)
-		
+		}, 300);
 
 		dom('main-wrapper').style.display = 'block';
 		setTimeout(function () {
 			dom('main-wrapper').style.opacity = '1';
 			dom('main-wrapper').style.transition = 'opacity 0.5s';
 			callBlackBox();
-
 		}, 500);
 		dom('typed-strings').style.display = 'block';
 	}, 2000);
