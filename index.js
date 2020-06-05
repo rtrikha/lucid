@@ -1,11 +1,6 @@
-// var timeout;
-// document.onmousemove = function () {
-// 	clearTimeout(timeout);
-// 	timeout = setTimeout(function () {
-// 		//document.getElementById('header-nav').style.opacity = 0.2;
-// 		//document.getElementById('header-nav').style.transition = 'opacity 0.3s';
-// 	}, 2000);
-// };
+function dom(id) {
+	return document.getElementById(id);
+}
 
 function drawCircle(circleID, color) {
 	document.getElementById(circleID).style.background = color;
@@ -25,15 +20,15 @@ function changeColorofBreathe(oddColor, evenColor, time) {
 var timeout1, timeout2, timeout3, timeout4, timeout5, timeout6;
 
 function revealBreathe() {
-	if (document.getElementById('play-audio').innerHTML == 'START LISTENING') {
-		document.getElementById('play-audio').innerHTML = 'STOP LISTENING';
+	if (dom('play-audio').innerHTML == 'START LISTENING') {
+		dom('play-audio').innerHTML = 'STOP LISTENING';
+		dom('noise-wrapper').style.opacity = '1';
+		dom('noise-wrapper').style.transition = 'opacity 0.7s';
+		dom('noise').style.display = 'flex';
 
-		document.getElementById('noise-wrapper').style.opacity = '1';
-		document.getElementById('noise-wrapper').style.transition = 'opacity 0.7s';
-		document.getElementById('breathe').style.display = 'block';
-		document.getElementById('breathe-wrapper').style.opacity = '1';
-		document.getElementById('breathe-wrapper').style.transition = 'opacity 6s';
-		document.getElementById('noise').style.display = 'flex';
+		dom('breathe').style.display = 'block';
+		dom('breathe-wrapper').style.opacity = '1';
+		dom('breathe-wrapper').style.transition = 'opacity 3s';
 
 		timeout1 = changeColorofBreathe('#4C4C4E', '#282828', 0);
 		timeout2 = changeColorofBreathe('#50635F', '#303F40', 12000);
@@ -42,7 +37,7 @@ function revealBreathe() {
 		timeout5 = changeColorofBreathe('#5CA791', '#498488', 48000);
 		timeout6 = changeColorofBreathe('#61BEA2', '#529CA0', 60000);
 	} else {
-		document.getElementById('play-audio').innerHTML = 'START LISTENING';
+		dom('play-audio').innerHTML = 'START LISTENING';
 
 		clearTimeout(timeout1);
 		clearTimeout(timeout2);
@@ -51,11 +46,50 @@ function revealBreathe() {
 		clearTimeout(timeout5);
 		clearTimeout(timeout6);
 
-		document.getElementById('noise-wrapper').style.opacity = '0';
-		document.getElementById('noise-wrapper').style.transition = 'opacity 0.7s';
-		document.getElementById('breathe').style.display = 'none';
-		document.getElementById('breathe-wrapper').style.opacity = '0';
-		document.getElementById('breathe-wrapper').style.transition = 'opacity 3s';
-		document.getElementById('noise').style.display = 'none';
+		dom('noise-wrapper').style.opacity = '0';
+		dom('noise-wrapper').style.transition = 'opacity 0.7s';
+		setTimeout(function () {
+			dom('noise').style.display = 'none';
+		}, 700);
+
+		dom('breathe-wrapper').style.opacity = '0';
+		dom('breathe-wrapper').style.transition = 'opacity 3s';
+		setTimeout(function () {
+			dom('breathe').style.display = 'none';
+		}, 700);
 	}
 }
+
+window.smoothScroll = function (target) {
+	var scrollContainer = target;
+	do {
+		//find scroll container
+		scrollContainer = scrollContainer.parentNode;
+		if (!scrollContainer) return;
+		scrollContainer.scrollTop += 1;
+	} while (scrollContainer.scrollTop == 0);
+
+	var targetY = 0;
+	do {
+		//find the top of target relatively to the container
+		if (target == scrollContainer) break;
+		targetY += target.offsetTop;
+	} while ((target = target.offsetParent));
+
+	scroll = function (c, a, b, i) {
+		i++;
+		if (i > 30) return;
+		c.scrollTop = a + ((b - a) / 30) * i;
+		setTimeout(function () {
+			scroll(c, a, b, i);
+		}, 20);
+	};
+	// start scrolling
+	scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+};
+
+dom('main-wrapper').style.display = 'none';
+dom('main-wrapper').style.opacity = '0';
+
+
+dom('typed-strings').style.display = 'none';

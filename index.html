@@ -6,10 +6,15 @@
 		<link rel="stylesheet" href="/styling/style.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<link rel="shortcut icon" type="image/png" href="/resources/logo/lucidFavIcon.png" />
+
 		<title>lucid | a mindful experience</title>
 	</head>
 	<body>
-		<div class="main-wrapper">
+		<div class="loader" id="loader">
+			<img id="monogram-loader" src="/resources/logo/lucidMonogramBig.svg" alt="" />
+		</div>
+		<div class="main-wrapper" id="main-wrapper">
 			<div class="header-nav">
 				<img id="monogram" src="./resources/logo/lucidMonogram.svg" alt="lucidMonogram" />
 				<a class="nav-text"></a>
@@ -33,42 +38,38 @@
 							Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and
 							relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.
 						</div>
-						<div class="play-audio" id="play-audio" onclick="audioToggle(); revealBreathe()">START LISTENING</div>
+						<div class="play-audio" id="play-audio" onclick="audioToggle(); revealBreathe(); smoothScroll(document.getElementById('noise-wrapper'))">START LISTENING</div>
 					</div>
 					<div class="noise-wrapper" id="noise-wrapper">
 						<div class="noise" id="noise">
 							<div id="wave-player">
 								<div id="wave-volume"></div>
-								<img class = "icon" src="resources/icons/waves.svg" alt="" onclick="pauseWave();">
+								<img class="icon" src="resources/icons/waves.svg" alt="" onclick="pauseWave();" />
 							</div>
 
 							<div id="rain-player">
 								<div id="rain-volume"></div>
-								<img class = "icon" src="resources/icons/rain.svg" alt="" onclick="pauseRain();">
-
+								<img class="icon" src="resources/icons/rain.svg" alt="" onclick="pauseRain();" />
 							</div>
 
 							<div id="thunder-player">
 								<div id="thunder-volume"></div>
-								<img class = "icon" src="resources/icons/thunder.svg" alt="" onclick="pauseThunder();">
-
+								<img class="icon" src="resources/icons/thunder.svg" alt="" onclick="pauseThunder();" />
 							</div>
 
 							<div id="birds-player">
 								<div id="birds-volume"></div>
-								<img class = "icon" src="resources/icons/jungle.svg" alt="" onclick="pauseBirds();">
-
+								<img class="icon" src="resources/icons/jungle.svg" alt="" onclick="pauseBirds();" />
 							</div>
 
 							<div id="wind-player">
 								<div id="wind-volume"></div>
-								<img class = "icon" src="resources/icons/wind.svg" alt="" onclick="pauseWind();">
+								<img class="icon" src="resources/icons/wind.svg" alt="" onclick="pauseWind();" />
 							</div>
 
 							<div id="chorus-player">
 								<div id="chorus-volume"></div>
-								<img class = "icon" src="resources/icons/snow.svg" alt="" onclick="pauseChorus();">
-
+								<img class="icon" src="resources/icons/snow.svg" alt="" onclick="pauseChorus();" />
 							</div>
 						</div>
 					</div>
@@ -79,7 +80,8 @@
 			</div>
 		</div>
 	</body>
-	<script src="/audio.js"></script>
 	<script src="/index.js"></script>
+	<script src="/audio.js"></script>
 	<script src="/blackBox.js"></script>
+
 </html>

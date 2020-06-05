@@ -25,7 +25,13 @@
 @mixin footer-nav {
 	display: flex;
 	position: fixed;
-	bottom: 4vh;
+	bottom: 0vh;
 	width: 80%;
+	background: $background-primary;
 	justify-content: flex-end;
+
+	.nav-text{
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
 }

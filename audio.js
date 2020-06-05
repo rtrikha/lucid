@@ -1,9 +1,18 @@
-var waveVolume = 0;
-var rainVolume = 0;
-var thunderVolume = 0;
-var birdsVolume = 0;
-var windVolume = 0;
-var chorusVolume = 0;
+//import callBlackBox from './blackBox';
+
+var waveVolume = 50;
+var rainVolume = 40;
+var thunderVolume = 70;
+var birdsVolume = 10;
+var windVolume = 60;
+var chorusVolume = 30;
+
+// var waveVolume = 0;
+// var rainVolume = 0;
+// var thunderVolume = 0;
+// var birdsVolume = 0;
+// var windVolume = 0;
+// var chorusVolume = 0;
 
 function initSlider(id, eventValue, value) {
 	$(id).slider({
@@ -51,6 +60,12 @@ function playAllAudio() {
 function audioToggle() {
 	if (document.getElementById('play-audio').innerHTML == 'START LISTENING') {
 		playAllAudio();
+		initSlider('#wave-volume', setVolumeWave, waveVolume);
+		initSlider('#rain-volume', setVolumeRain, rainVolume);
+		initSlider('#thunder-volume', setVolumeThunder, thunderVolume);
+		initSlider('#birds-volume', setVolumeBirds, birdsVolume);
+		initSlider('#wind-volume', setVolumeWind, windVolume);
+		initSlider('#chorus-volume', setVolumeChorus, chorusVolume);
 	} else {
 		pauseAllAudio();
 	}
@@ -77,13 +92,14 @@ function playAudio(id, fileName, myVolume, volumeControl) {
 	id.setAttribute('loop', 'loop');
 	volumeControl(myVolume / 100);
 	id.play();
-	// id.onloadeddata= () => {
-	// 	console.log('loaded ' + fileName);
-	// }
+	id.onloadeddata = () => {
+		console.log('loaded ' + fileName);
+	};
 }
 
 function setVolumeWave(myVolume) {
 	var waveSound = document.getElementById('waveSound');
+	console.log('setVolumeWave -> waveSound', waveSound);
 	waveSound.volume = myVolume;
 }
 
@@ -112,9 +128,10 @@ function setVolumeChorus(myVolume) {
 	chorusSound.volume = myVolume;
 }
 
-function pauseWave() {
+function pauseWave(event) {
 	initSlider('#wave-volume', setVolumeWave, 0);
 	setVolumeWave(0);
+	console.log(event);
 }
 function pauseRain() {
 	initSlider('#rain-volume', setVolumeRain, 0);
@@ -135,4 +152,42 @@ function pauseWind() {
 function pauseChorus() {
 	initSlider('#chorus-volume', setVolumeChorus, 0);
 	setVolumeChorus(0);
+}
+
+//handlin loader
+
+loaderDismiss();
+
+function loadAudio(id, fileName) {
+	id.src = fileName;
+	id.onloadeddata = () => {
+		console.log('loaded ' + fileName);
+	};
+}
+
+function loaderDismiss() {
+	loadAudio(waveSound, '/resources/audio/waves.mp3');
+	loadAudio(rainSound, '/resources/audio/rain.mp3');
+	loadAudio(thunderSound, '/resources/audio/rain.mp3');
+	loadAudio(birdsSound, '/resources/audio/birds.mp3');
+	loadAudio(windSound, '/resources/audio/wind.mp3');
+	loadAudio(chorusSound, '/resources/audio/chorus.mp3');
+
+	setTimeout(function () {
+		dom('loader').style.opacity = '0';
+		dom('loader').style.transition = 'opacity 0.3s';
+		setTimeout(function(){
+			dom('loader').style.display = 'none';
+		},300)
+		
+
+		dom('main-wrapper').style.display = 'block';
+		setTimeout(function () {
+			dom('main-wrapper').style.opacity = '1';
+			dom('main-wrapper').style.transition = 'opacity 0.5s';
+			callBlackBox();
+
+		}, 500);
+		dom('typed-strings').style.display = 'block';
+	}, 2000);
 }
