@@ -888,6 +888,11 @@ body {
 }
 
 @media screen and (max-width: 560px) {
+  .loader {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    margin-top: 32vh !important;
+  }
   #monogram {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
@@ -929,7 +934,7 @@ body {
 }
 
 .loader #monogram-loader {
-  opacity: 0.1;
+  opacity: 0.05;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

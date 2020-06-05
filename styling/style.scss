@@ -174,10 +174,13 @@ body {
 }
 
 @media screen and (max-width: 560px) {
+	.loader {
+		transform: scale(0.7);
+		margin-top: 32vh !important;
+	}
 	#monogram {
 		transform: scale(0.9);
 	}
-
 	.header-nav {
 		padding-top: 4vh;
 	}
@@ -201,7 +204,7 @@ body {
 	margin-top: 42vh;
 
 	#monogram-loader {
-		opacity: 0.1;
+		opacity: 0.05;
 		display: flex;
 		margin: 0 auto;
 		animation: rotateLoader 24s linear infinite;
