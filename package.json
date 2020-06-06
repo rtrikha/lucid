@@ -18,7 +18,7 @@
         "copyresources": "cp -R resources dist",
         "serve": "browser-sync start --startPath /dist --server --files \"dist/styling/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
         "build:css": "run-s lint-scss scss autoprefixer uglifycss",
-        "build:js": "run-s uglify",
+        "build:js": "run-s copyjs",
         "build:others": "run-s copyhtmls copyresources",
         "build": "run-s build:*",
         "watch:css": "onchange 'styling/**/*.scss' -- run-s build:css",
