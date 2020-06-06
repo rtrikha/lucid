@@ -23,7 +23,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
+  margin-right: 2vw !important;
 }
 
 #wave-player #wave-volume {
@@ -74,7 +74,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
+  margin-right: 2vw !important;
 }
 
 #rain-player #rain-volume {
@@ -125,7 +125,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
+  margin-right: 2vw !important;
 }
 
 #thunder-player #thunder-volume {
@@ -176,7 +176,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
+  margin-right: 2vw !important;
 }
 
 #birds-player #birds-volume {
@@ -227,7 +227,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2vw;
+  margin-right: 2vw !important;
 }
 
 #wind-player #wind-volume {

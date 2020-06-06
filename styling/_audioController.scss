@@ -57,10 +57,9 @@ $slider-margin-top: -8px; //same as bar height
 	outline: none;
 }
 
-
 #wave-player {
 	@include playerSupporter();
-	margin-right: 2vw;
+	margin-right: 2vw !important;
 
 	#wave-volume {
 		@include volumeSupporter();
@@ -81,7 +80,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #rain-player {
 	@include playerSupporter();
-	margin-right: 2vw;
+	margin-right: 2vw !important;
 
 	#rain-volume {
 		@include volumeSupporter();
@@ -102,7 +101,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #thunder-player {
 	@include playerSupporter();
-	margin-right: 2vw;
+	margin-right: 2vw !important;
 
 	#thunder-volume {
 		@include volumeSupporter();
@@ -123,7 +122,7 @@ $slider-margin-top: -8px; //same as bar height
 
 #birds-player {
 	@include playerSupporter();
-	margin-right: 2vw;
+	margin-right: 2vw !important;
 
 	#birds-volume {
 		@include volumeSupporter();
@@ -143,7 +142,7 @@ $slider-margin-top: -8px; //same as bar height
 }
 #wind-player {
 	@include playerSupporter();
-	margin-right: 2vw;
+	margin-right: 2vw !important;
 
 	#wind-volume {
 		@include volumeSupporter();
@@ -226,4 +225,3 @@ $slider-margin-top: -8px; //same as bar height
 		width: 100%;
 	}
 }
-
