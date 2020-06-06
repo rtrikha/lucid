@@ -1,10 +1,10 @@
 {
-    "name": "Sparkin",
+    "name": "lucid",
     "version": "1.0.0",
-    "description": "Spark your creativity",
-    "author": "Vishal Agarwal",
-    "license": "GPLv3",
-    "homepage": "https://www.sparkin.co",
+    "description": "a mindful experience",
+    "author": "Raunak Trikha",
+    "license": "MIT",
+    "homepage": "https://www.lucid.2dots.xyz",
     "scripts": {
         "clean": "rimraf dist/{css/*,js/*,resources/*,*.html}",
         "autoprefixer": "postcss -u autoprefixer -r dist/styling/*",
