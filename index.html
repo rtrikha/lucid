@@ -14,8 +14,9 @@
 		<meta property="og:url" content="http://www.lucid.2dots.xyz/" />
 		<meta property="og:description" content="Mindful experience for a distraction free thinking" />
 		<meta property="og:image" content="https://raw.githubusercontent.com/rtrikha/lucid/master/resources/logo/ogimg.png" />
-
-	</head>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+		</head>
 	<body>
 		<div class="loader" id="loader">
 			<img id="monogram-loader" src="/resources/logo/lucidMonogramBig.svg" alt="" />
@@ -40,8 +41,7 @@
 				<div class="body-context-wrapper">
 					<div class="text-context">
 						<div class="heading" id="typed-strings"></div>
-						<div class="subheading" id="subheading">
-						</div>
+						<div class="subheading" id="subheading"></div>
 						<div class="play-audio" id="play-audio" onclick="audioToggle(); revealBreathe(); smoothScroll(document.getElementById('noise-wrapper'))">START LISTENING</div>
 					</div>
 					<div class="noise-wrapper" id="noise-wrapper">
@@ -83,9 +83,24 @@
 				<a class="nav-text" href="https://github.com/rtrikha/lucid" target="blank">GitHub</a>
 			</div>
 		</div>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyB1MueWX3ApwbSWAiUtYZHYJSDjnHjZn6M',
+				authDomain: 'lucid-a7a2f.firebaseapp.com',
+				databaseURL: 'https://lucid-a7a2f.firebaseio.com',
+				projectId: 'lucid-a7a2f',
+				storageBucket: 'lucid-a7a2f.appspot.com',
+				messagingSenderId: '570995377771',
+				appId: '1:570995377771:web:f242a0dac640d24f25d32e',
+				measurementId: 'G-SVGFMJFG5Y',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+		</script>
 	</body>
 	<script src="/index.js"></script>
 	<script src="/audio.js"></script>
 	<script src="/blackBox.js"></script>
-
 </html>
