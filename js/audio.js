@@ -5,7 +5,7 @@ var birdsVolume = 10;
 var windVolume = 60;
 var chorusVolume = 50;
 
-var forceLoaderTime = 0;
+var forceLoaderTime = 3000;
 
 function dom(id) {
 	return document.getElementById(id);
