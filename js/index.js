@@ -1,3 +1,4 @@
+
 function dom(id) {
 	return document.getElementById(id);
 }
@@ -91,9 +92,10 @@ dom('typed-strings').style.display = 'none';
 
 var screenWidth = screen.width;
 
-if(screenWidth<720){
-	dom('subheading').innerHTML = "lucid is a mindful implication of brown noise for better concentration and relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises."
-}
-else{
-	dom('subheading').innerHTML = "Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises."
+if (screenWidth < 720) {
+	dom('subheading').innerHTML =
+		'lucid is a mindful implication of brown noise for better concentration and relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.';
+} else {
+	dom('subheading').innerHTML =
+		'Cognitive processing is easily affected by environmental stimulation that distracts attention. lucid is a mindful implication of brown noise for better concentration and relaxation. lucid uses the baseline of how our brains respond as we complete tasks in different environments by changing background noises.';
 }

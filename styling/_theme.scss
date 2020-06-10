@@ -1,20 +1,101 @@
-$background-primary: #111111;
-$background-secondary: #282828;
-$text-primary: #ffffff;
-$text-secondary: #a1a1a6;
-$text-tertiary: #4c4c4e;
+$a-b: var(--a-b);
+$f-h: var(--f-h);
+$f-m: var(--f-m);
+$f-l: var(--f-l);
+$b-h: var(--b-h);
+$b-m: var(--b-m);
+$b-l: var(--b-l);
+$t-f: var(--t-f);
+$t-b: var(--t-b);
+
+$f-t-cta: var(--f-t-cta);
+$l-s-cta: var(--l-s-cta);
+$l-h-cta: var(--l-h-cta);
+
+$f-t-h: var(--f-t-h);
+$l-s-h: var(--l-s-h);
+$l-h-h: var(--l-h-h);
+
+$f-t-sh: var(--f-t-sh);
+$l-s-sh: var(--l-s-sh);
+$l-h-sh: var(--l-h-sh);
+
+$f-t-nt: var(--f-t-nt);
+$l-s-nt: var(--l-s-nt);
+$l-h-nt: var(--l-h-nt);
+
+$f-t-misc: var(--f-t-misc);
+$l-s-misc: var(--l-s-misc);
+$l-h-misc: var(--l-h-misc);
+
+@mixin cta {
+	color: $f-h;
+	font-family: heading, monospace;
+	font-size: $f-t-cta;
+	letter-spacing: $l-s-cta;
+	line-height: $l-h-cta;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 2vh;
+
+	&:hover {
+		color: $t-f;
+	}
+}
+
+@mixin heading {
+	color: $f-h;
+	font-family: mono-300, monospace;
+	font-size: $f-t-h;
+	letter-spacing: $l-s-h;
+	line-height: $l-h-h;
+}
+
+@mixin sub-heading {
+	color: $f-m;
+	font-family: mono-300, monospace;
+	font-size: $f-t-sh;
+	letter-spacing: $l-s-sh;
+	line-height: $l-h-sh;
+}
+
+@mixin nav-text {
+	color: $f-l;
+	font-family: heading;
+	font-size: $f-t-nt;
+	letter-spacing: $l-s-nt;
+	line-height: $l-h-nt;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		color: $f-m;
+	}
+}
+
+@mixin misc-text {
+	color: $f-m;
+	font-family: mono-300, monospace;
+	font-size: $f-t-misc;
+	letter-spacing: $l-s-misc;
+	line-height: $l-h-misc;
+}
 
 @font-face {
-	src: url(/resources/fonts/SpaceMono-Regular.ttf);
-	font-family: Space-Mono;
-	font-weight: 400;
+	src: url(/resources/fonts/mono-300.ttf);
+	font-family: mono-300;
 }
+
 @font-face {
-	src: url(/resources/fonts/SpaceMono-Bold.ttf);
-	font-family: Space-Mono;
-	font-weight: 600;
+	src: url(/resources/fonts/mono-500.ttf);
+	font-family: mono-500;
 }
+
 @font-face {
-	src: url(/resources/fonts/Carbon.ttf);
-	font-family: Carbon;
+	src: url(/resources/fonts/heading.ttf);
+	font-family: heading;
 }

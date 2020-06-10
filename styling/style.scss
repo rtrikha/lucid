@@ -4,7 +4,7 @@
 @import 'breathe';
 
 body {
-	background: $background-primary;
+	background: $a-b;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -21,16 +21,11 @@ body {
 
 .header-nav {
 	@include header-nav;
-	.nav-text {
-		@include nav-text;
-	}
 }
 
 .footer-nav {
 	@include footer-nav;
-	.nav-text {
-		@include nav-text;
-	}
+	width: 80%;
 }
 
 .body-wrapper {
@@ -45,25 +40,17 @@ body {
 .body-context-wrapper {
 	display: flex;
 	position: relative;
-	padding-top: 42vh;
+	padding-top: 38vh;
 }
 
 .text-context {
 	width: 60%;
 	.heading {
-		color: $text-primary;
-		font-family: Space-Mono, monospace;
-		font-weight: 400;
-		font-size: 24px;
-		letter-spacing: -2px;
+		@include heading;
 	}
 
 	.subheading {
-		color: $text-secondary;
-		font-family: Space-Mono, monospace;
-		font-size: 13px;
-		letter-spacing: -0.2px;
-		line-height: 24px;
+		@include sub-heading;
 		padding-top: 1vh;
 		opacity: 0;
 		animation-name: moveTextFromBottom;
@@ -74,23 +61,18 @@ body {
 	}
 
 	.play-audio {
-		color: $text-primary;
+		@include cta;
 		opacity: 0;
+		padding-left: 0px;
+		letter-spacing: 0px;
 		width: max-content;
-		font-family: Carbon;
-		text-transform: uppercase;
 		position: relative;
-		margin-top: 8vh;
+		margin-top: 6vh;
 		animation-name: moveTextFromBottom;
 		animation-duration: 0.4s;
 		animation-fill-mode: forwards;
 		animation-timing-function: ease-in-out;
 		animation-delay: 1.8s;
-		cursor: pointer;
-
-		&:hover {
-			color: #61bea2;
-		}
 	}
 }
 
@@ -101,7 +83,7 @@ body {
 }
 
 .dud {
-	color: $text-tertiary;
+	color: $f-l;
 }
 
 @keyframes moveTextFromBottom {
@@ -125,13 +107,8 @@ body {
 	}
 	.text-context {
 		width: 60%;
-		.heading {
-			font-size: 22px;
-		}
+
 		.subheading {
-			font-size: 12px;
-			letter-spacing: -0.2px;
-			line-height: 22px;
 			padding-top: 1vh;
 		}
 
@@ -156,6 +133,7 @@ body {
 		.play-audio {
 			margin: 0 auto;
 			margin-top: 6vh;
+			padding-left: 2vw;
 		}
 	}
 
@@ -165,7 +143,6 @@ body {
 	.body-context-wrapper {
 		flex-direction: column;
 	}
-
 	.noise-wrapper {
 		width: 100%;
 		padding-top: 8vh;
@@ -199,7 +176,7 @@ body {
 }
 
 .loader {
-	background-color: $background-primary;
+	background-color: $a-b;
 	position: relative;
 	margin-top: 42vh;
 

@@ -5,8 +5,11 @@ var birdsVolume = 10;
 var windVolume = 60;
 var chorusVolume = 50;
 
-var forceLoaderTime = 3000;
+var forceLoaderTime = 0;
 
+function dom(id) {
+	return document.getElementById(id);
+}
 
 function initSlider(id, eventValue, value) {
 	$(id).slider({
